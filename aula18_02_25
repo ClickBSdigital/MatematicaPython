@@ -62,28 +62,29 @@ print(permutacao)
 código padrão para combinação em python
 
 def perm(n, p):
-    i = p;
-    resp = 1;
+    i = p
+    resp = 1
     while(i > 0):
-        # print(n)
-        resp =resp*n
+        print(n)
+        resp = resp * n
         n = n-1
         i = i-1
     return resp
     
-def fatorial(n):
-    resp = 1;
+def fat(n):
+    resp = 1
     while(n > 0):
-        # print(n)
-        resp =resp*n
+        resp = resp * n 
         n = n-1
     return resp
 
 def comb(n, p):
-    c = fatorial (n) / (fatorial(p) * fatorial(n-p))
+    c = fat(n) / (fat(p) * fat(n-p))
     return c
 
-print(comb(20,4))    
+print(perm(9,4))
+print(comb(20,4))   
+print(fat(5))
     
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -217,3 +218,69 @@ Uma equipe de trabalho é formada por 6 mulheres e 5 homens. Eles pretendem se o
 (Enem/2016) Para cadastrar-se em um site, uma pessoa precisa escolher uma senha composta por quatro caracteres, sendo dois algarismos e duas letras (maiúsculas ou minúsculas). As letras e os algarismos podem estar em qualquer posição. Essa pessoa sabe que o alfabeto é composto por vinte e seis letras e que uma letra maiúscula difere da minúscula em uma senha.
 O número total de senhas possíveis para o cadastramento nesse site é dado por?
 
+EXERCÍCIOS
+
+01= Quantas senhas com 4 algarismos diferentes podemos escrever com os algarismos 1, 2, 3, 4, 5, 6, 7, 8,e 9?
+
+Para calcular o número de senhas com 4 algarismos diferentes que podemos escrever com os algarismos 1, 2, 3, 4, 5, 6, 7, 8 e 9, podemos usar o conceito de permutação. Como a ordem dos algarismos importa e não podemos repetir algarismos, o número de possíveis senhas é dado por:
+
+[ P(9, 4) = \frac{9!}{(9-4)!} = 9 \times 8 \times 7 \times 6 ]
+
+Aqui está como você pode calcular isso em Python:
+
+python
+Copy code
+from math import perm
+
+# Número de algarismos disponíveis
+n = 9
+
+# Número de algarismos na senha
+k = 4
+
+# Calculando o número de senhas possíveis
+numero_de_senhas = perm(n, k)
+
+print(f"O número de senhas possíveis é: {numero_de_senhas}")
+Explicação:
+perm(n, k) é uma função da biblioteca math que calcula o número de permutações de n elementos tomados k a k.
+Neste caso, n = 9 (os algarismos de 1 a 9) e k = 4 (a senha tem 4 algarismos).
+Resultado:
+Se você executar o código acima, ele imprimirá:
+
+Copy code
+O número de senhas possíveis é: 3024
+Portanto, existem 3024 senhas possíveis com 4 algarismos diferentes usando os algarismos de 1 a 9.
+
+02= Um técnico de um time de voleibol possui a sua disposição 15 jogadores que podem jogar em qualquer posição. De quantas maneiras ele poderá escalar seu time de 6 jogadores?
+
+03= De quantas maneiras diferentes, uma pessoa pode se vestir tendo 6 camisas e 4 calças?
+
+
+04= De quantas maneiras diferentes 6 amigos podem sentar em um banco para tirar uma foto?
+
+
+
+05= Em uma competição de xadrez existem 8 jogadores. De quantas formas diferentes poderá ser formado o pódio (primeiro, segundo e terceiro lugares)?
+
+
+06= Uma lanchonete tem uma promoção de combo com preço reduzido em que o cliente pode escolher 4 tipos diferentes de sanduíches, 3 tipos de bebida e 2 tipos de sobremesa. Quantos combos diferentes os clientes podem montar?
+
+07= Quantas comissões de 4 elementos podemos formar com 20 alunos de uma turma?
+
+08= Determine o número de anagramas:
+a) Existentes na palavra FUNÇÃO.
+b) Existentes na palavra FUNÇÃO que iniciam com F e terminam com O.
+c) Existentes na palavra FUNÇÃO desde que as vogais A e O apareçam juntas nessa ordem (ÃO).
+
+
+09= A família de Carlos é formada por 5 pessoas: ele, sua esposa Ana e mais 3 filhos, que são Carla, Vanessa e Tiago. Eles desejam tirar uma foto da família para enviar como presente ao avô materno das crianças.
+Determine o número de possibilidades de os membros da família poderem se organizar para tirar a foto e de quantas formas possíveis Carlos e Ana podem ficar lado a lado.
+
+
+10= Uma equipe de trabalho é formada por 6 mulheres e 5 homens. Eles pretendem se organizar em grupo de 6 pessoas, com 4 mulheres e 2 homens, para compor uma comissão. Quantas comissões podem ser formadas?
+
+11= (Enem/2016) O tênis é um esporte em que a estratégia de jogo a ser adotada depende, entre outros fatores, de o adversário ser canhoto ou destro. Um clube tem um grupo de 10 tenistas, sendo que 4’são canhotos e 6 são destros. O técnico do clube deseja realizar uma partida de exibição entre dois desses jogadores, porém, não poderão ser ambos canhotos. Qual o número de possibilidades de escolha dos tenistas para a partida de exibição?
+
+12= (Enem/2016) Para cadastrar-se em um site, uma pessoa precisa escolher uma senha composta por quatro caracteres, sendo dois algarismos e duas letras (maiúsculas ou minúsculas). As letras e os algarismos podem estar em qualquer posição. Essa pessoa sabe que o alfabeto é composto por vinte e seis letras e que uma letra maiúscula difere da minúscula em uma senha.
+O número total de senhas possíveis para o cadastramento nesse site é dado por?
