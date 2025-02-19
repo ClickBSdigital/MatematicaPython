@@ -1,0 +1,219 @@
+ possíveis para o cadastramento nesse site é dado por?
+
+Para determinar o número total de senhas possíveis, seguimos os seguintes passos:
+
+1) Caracteres disponíveis:
+Algarismos: 10 (0 a 9).
+Letras: 26 letras maiúsculas e 26 letras minúsculas, totalizando ( 26 + 26 = 52 ) letras.
+
+2) Estrutura da senha:
+A senha é composta por 4 caracteres, sendo 2 algarismos e 2 letras. Os caracteres podem estar em qualquer posição. Por exemplo:
+Letra, algarismo, letra, algarismo (LALA).
+Algarismo, letra, algarismo, letra (ALAL).
+Letra, letra, algarismo, algarismo (LLAA).
+etc.
+
+3) Número de maneiras de escolher as posições dos algarismos e letras:
+Precisamos escolher 2 posições para os algarismos entre as 4 posições da senha. O número de maneiras de fazer isso é dado pela combinação de 4 elementos tomados 2 a 2:
+[ C(4, 2) = \frac{4!}{2! \times (4 - 2)!} = \frac{4 \times 3}{2 \times 1} = 6 ]
+
+4) Número de maneiras de escolher os algarismos:
+Para cada uma das 2 posições dos algarismos, há 10 possibilidades (0 a 9). Portanto, o número de maneiras de escolher os algarismos é:
+[ 10 \times 10 = 100 ]
+
+5) Número de maneiras de escolher as letras:
+Para cada uma das 2 posições das letras, há 52 possibilidades (26 maiúsculas + 26 minúsculas). Portanto, o número de maneiras de escolher as letras é:
+[ 52 \times 52 = 2704 ]
+
+6) Número total de senhas:
+Multiplicamos o número de maneiras de escolher as posições, os algarismos e as letras:
+[ C(4, 2) \times (\text{algarismos}) \times (\text{letras}) = 6 \times 100 \times 2704 = 1622400 ]
+
+Resposta:
+O número total de senhas possíveis para o cadastramento nesse site é 1.622.400.
+
+
+
+
+
+código padrão para permutação em python
+
+def perm(n, p):
+    i = p;
+    resp = 1;
+    while(i > 0): 
+        resp =resp*next
+        n = n-1
+        i = i-1
+    return resp
+    
+def fatorial(n):
+    resp = 1;
+    while(i > 0):
+        resp =resp*next
+        n = n-1
+    return resp
+    
+permutacao = perm(9,4)
+print(permutacao)
+    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+código padrão para combinação em python
+
+def perm(n, p):
+    i = p;
+    resp = 1;
+    while(i > 0):
+        # print(n)
+        resp =resp*n
+        n = n-1
+        i = i-1
+    return resp
+    
+def fatorial(n):
+    resp = 1;
+    while(n > 0):
+        # print(n)
+        resp =resp*n
+        n = n-1
+    return resp
+
+def comb(n, p):
+    c = fatorial (n) / (fatorial(p) * fatorial(n-p))
+    return c
+
+print(comb(20,4))    
+    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+em uma corrida com 3 atletas, 
+
+Para formar um comite de 4 pessoas de um grupo de 10,
+C(10,4) =        10!    . 
+                  (4!(10-4)!)
+
+
+PERMUTACAO OU COMBINACAO
+
+Arranjo, combinação e permutações são conceitos fundamentais em matemática e são frequentemente utilizados em diversas áreas, como estatística, probabilidade e teoria dos conjuntos. Esses conceitos são usados para calcular o número de maneiras diferentes que um conjunto de objetos pode ser organizado ou selecionado. Embora possam parecer semelhantes, cada um desses conceitos tem suas próprias regras e fórmulas específicas.
+Neste texto, vamos explorar cada um desses conceitos em detalhes e entender como eles são aplicados em diferentes situações.
+Como a Análise Combinatória é dividida
+Por ser um dos tópicos em que a matemática é dividida, aAnálise Combinatória estuda os critérios para a representação da quantidade de possibilidades de um agrupamento sem a necessidade de desenvolvê-los.
+Veja como a Análise Combinatória é dividida:
+Permutações
+Sendo M um conjunto com m elementos, isto é, M = {a1, a2, …, am}, chamamos de permutação dos m elementos a todo arranjo em que r = m. Portanto, Pm=m.(m-1).(m-2)…..[m-(m-1)].
+Permutação é um conceito da matemática que se refere ao número de maneiras de organizar um conjunto de elementos quando a ordem importa.
+Características:
+A ordem dos elementos é relevante. Por exemplo, a sequência ABC é diferente de BAC.
+Todos os elementos do conjunto são usados.
+O número de permutações de ( n ) elementos distintos é dado por ( n! ) (fatorial de ( n )).
+Fórmula:
+Se temos ( n ) elementos distintos, o número de permutações é:
+[ P(n) = n! ]
+Exemplo:
+Quantas maneiras diferentes podemos organizar as letras A, B e C?
+Solução:
+São 3 elementos distintos, então o número de permutações é ( 3! = 3 \times 2 \times 1 = 6 ).
+As permutações são: ABC, ACB, BAC, BCA, CAB, CBA.
+
+
+
+
+Fatorial
+Para simplificarmos as fórmulas de arranjos e permutações, além de outras que estudaremos futuramente, vamos definir o símbolo fatorial “!”.
+Seja m um número natural maior ou igual a 2, definimos por m! o produto dos números consecutivos em ordem decrescente de m até 1, isto é: m! = m.(m-1).(m-2)…..3.2.1. Para m menor que 2, temos que 0! = 1 e 1! = 1.
+Combinações
+A Combinação está relacionada aos verbos escolher e selecionar, é um conjunto, logo a ordem não importa.
+“Seja M um conjunto com m elementos, isto é, M = {a1, a2, a3, …, am}. Chamamos de combinações dos m elementos, tomados r a r, aos subconjuntos de M constituídos de r elementos.”
+O número de combinações é dado por :
+
+
+
+Combinação é um conceito da matemática que se refere ao número de maneiras de escolher um subconjunto de elementos quando a ordem não importa.
+Características:
+A ordem dos elementos não é relevante. Por exemplo, o grupo {A, B, C} é o mesmo que {C, B, A}.
+Apenas uma parte dos elementos do conjunto é usada.
+O número de combinações de ( n ) elementos tomados ( k ) a ( k ) é dado por ( C(n, k) ).
+Fórmula:
+Se temos ( n ) elementos distintos e queremos escolher ( k ) elementos, o número de combinações é:
+[ C(n, k) = \frac{n!}{k! \times (n - k)!} ]
+Exemplo:
+Quantos grupos de 2 pessoas podemos formar com 4 pessoas (A, B, C, D)?
+Solução:
+São 4 elementos e queremos escolher 2, então o número de combinações é ( C(4, 2) = \frac{4!}{2! \times (4 - 2)!} = 6 ).
+Os grupos são: {A, B}, {A, C}, {A, D}, {B, C}, {B, D}, {C, D}.
+
+Resumo das diferenças:
+Característica
+Permutação
+Combinação
+Ordem importa
+Sim
+Não
+Uso dos elementos
+Todos os elementos
+Apenas um subconjunto
+Fórmula
+( P(n) = n! )
+( C(n, k) = \frac{n!}{k! \times (n - k)!} )
+Exemplo
+Organizar letras de uma palavra
+Escolher membros de um comitê
+
+
+Quando usar cada um?
+Use permutações quando a ordem dos elementos for importante.
+Use combinações quando a ordem dos elementos não for importante.
+
+
+Permutações com elementos repetidos
+A Permutação está relacionada aos verbos trocar e ordenar, é uma sequência, portanto a ordem importa e sequências iguais não devem ser contadas mais de uma vez, exemplo, a palavra Ana: ao permutarmos as duas letras “a”‘s, continuamos com anA, logo, consideramos que a sequência é a mesma.
+Toda vez que tivermos números repetidos, devemos dividir a quantidade de permutações pelo fatorial da quantidade de elementos repetidos. Ou seja, sendo um conjunto de n elementos, dos quais n1 são iguais a a1, n2 são iguais a a2, …, nr são iguais a ar,.
+Arranjo
+Arranjo é um conceito da análise combinatória que se refere ao número de maneiras diferentes que um conjunto de objetos pode ser organizado em grupos ordenados. Em outras palavras, o arranjo é uma permutação parcial, ou seja, uma seleção de objetos em que a ordem é importante. O arranjo é utilizado em situações em que é necessário escolher um número específico de elementos de um conjunto e organizá-los em uma ordem específica.
+Por exemplo, o número de maneiras diferentes que três pessoas podem ser escolhidas para ocupar o primeiro, segundo e terceiro lugares em uma competição.
+A fórmula para calcular o número de arranjos possíveis é dada por A = n!/(n-k)!, onde n é o número total de objetos e k é o número de objetos selecionados. O arranjo é um dos três tipos de agrupamentos estudados na análise combinatória, juntamente com a permutação e a combinação.
+Veja também o conteúdo sobreanálise combinatória e probabilidade
+Qual a diferença entre Arranjo, combinação e permutação?
+Arranjo, combinação e permutações são conceitos fundamentais da análise combinatória e são utilizados para calcular o número de maneiras diferentes que um conjunto de objetos pode ser organizado ou selecionado. Cada um desses conceitos é empregado em uma situação específica e possui métodos específicos para ser calculado. A diferença entre eles é a seguinte:
+Permutação: é o agrupamento ordenado de todos os elementos de um conjunto. A permutação é utilizada quando todos os elementos do conjunto são utilizados e a ordem é importante. 
+Arranjo: é o agrupamento ordenado formado por parte dos elementos de um conjunto. O arranjo é utilizado quando é necessário escolher um número específico de elementos de um conjunto e organizá-los em uma ordem específica.
+Combinação: é o agrupamento não ordenado de todos os elementos de um conjunto. A combinação é utilizada quando todos os elementos do conjunto são utilizados e a ordem não é importante. 
+Para identificar uma questão de cada tipo, é importante prestar atenção nas informações fornecidas no enunciado. Algumas dicas são:
+Permutação: quando todos os elementos do conjunto são utilizados e a ordem é importante. Exemplo: número de maneiras diferentes que três pessoas podem ser escolhidas para ocupar o primeiro, segundo e terceiro lugares em uma competição.
+Arranjo: quando é necessário escolher um número específico de elementos de um conjunto e organizá-los em uma ordem específica. Exemplo: número de maneiras diferentes que três pessoas podem ser escolhidas para ocupar o primeiro, segundo e terceiro lugares em uma competição, mas agora apenas duas pessoas serão escolhidas.
+Combinação: quando todos os elementos do conjunto são utilizados e a ordem não é importante. Exemplo: número de maneiras diferentes que três pessoas podem ser escolhidas para formar uma comissão a partir de um grupo de cinco pessoas.
+
+
+Quantas senhas com 4 algarismos diferentes podemos escrever com os algarismos 1, 2, 3, 4, 5, 6, 7, 8,e 9?
+
+Um técnico de um time de voleibol possui a sua disposição 15 jogadores que podem jogar em qualquer posição. De quantas maneiras ele poderá escalar seu time de 6 jogadores?
+
+De quantas maneiras diferentes, uma pessoa pode se vestir tendo 6 camisas e 4 calças?
+
+De quantas maneiras diferentes 6 amigos podem sentar em um banco para tirar uma foto?
+
+Em uma competição de xadrez existem 8 jogadores. De quantas formas diferentes poderá ser formado o pódio (primeiro, segundo e terceiro lugares)?
+
+Uma lanchonete tem uma promoção de combo com preço reduzido em que o cliente pode escolher 4 tipos diferentes de sanduíches, 3 tipos de bebida e 2 tipos de sobremesa. Quantos combos diferentes os clientes podem montar?
+
+Quantas comissões de 4 elementos podemos formar com 20 alunos de uma turma?
+
+Determine o número de anagramas:
+
+a) Existentes na palavra FUNÇÃO.
+b) Existentes na palavra FUNÇÃO que iniciam com F e terminam com O.
+c) Existentes na palavra FUNÇÃO desde que as vogais A e O apareçam juntas nessa ordem (ÃO).
+
+A família de Carlos é formada por 5 pessoas: ele, sua esposa Ana e mais 3 filhos, que são Carla, Vanessa e Tiago. Eles desejam tirar uma foto da família para enviar como presente ao avô materno das crianças.
+Determine o número de possibilidades de os membros da família poderem se organizar para tirar a foto e de quantas formas possíveis Carlos e Ana podem ficar lado a lado.
+
+Uma equipe de trabalho é formada por 6 mulheres e 5 homens. Eles pretendem se organizar em grupo de 6 pessoas, com 4 mulheres e 2 homens, para compor uma comissão. Quantas comissões podem ser formadas?
+
+(Enem/2016) O tênis é um esporte em que a estratégia de jogo a ser adotada depende, entre outros fatores, de o adversário ser canhoto ou destro. Um clube tem um grupo de 10 tenistas, sendo que 4’são canhotos e 6 são destros. O técnico do clube deseja realizar uma partida de exibição entre dois desses jogadores, porém, não poderão ser ambos canhotos. Qual o número de possibilidades de escolha dos tenistas para a partida de exibição?
+
+(Enem/2016) Para cadastrar-se em um site, uma pessoa precisa escolher uma senha composta por quatro caracteres, sendo dois algarismos e duas letras (maiúsculas ou minúsculas). As letras e os algarismos podem estar em qualquer posição. Essa pessoa sabe que o alfabeto é composto por vinte e seis letras e que uma letra maiúscula difere da minúscula em uma senha.
+O número total de senhas possíveis para o cadastramento nesse site é dado por?
+
