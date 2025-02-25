@@ -20,3 +20,5 @@ P_chuva_dado_acerto = (P_acerto_chuva * P_chuva) / P_acerto   # P(A|B)
 # Imprimindo os resultados
 print(f"Probabilidade do meteorologista acertar a previsão: {P_acerto:.4f}")
 print(f"Probabilidade de ter sido um dia de chuva dado que houve acerto: {P_chuva_dado_acerto:.4f}")
+
+# kkkkkk
